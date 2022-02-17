@@ -17,8 +17,7 @@ async function main(): Promise<void> {
       title: audio.edition.document.title,
       isCompilation: audio.edition.document.friend.isCompilations,
       author: audio.edition.document.friend.name,
-      size: (audio.edition.impression?.paperbackSize.replace(/xl.*/, `xl`) ??
-        `m`) as PrintSize,
+      size: (audio.edition.impression?.paperbackSize ?? `m`) as PrintSize,
       pages: audio.edition.impression?.paperbackVolumes[0] ?? 222,
       edition: audio.edition.type,
       isbn: audio.edition.isbn?.code ?? ``,

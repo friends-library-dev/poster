@@ -3,7 +3,7 @@
 // @generated
 // This file was automatically generated and should not be edited.
 
-import { EditionType, Lang, PrintSizeVariant } from './globalTypes';
+import { EditionType, Lang, PrintSize } from './globalTypes';
 
 // ====================================================
 // GraphQL query operation: GetAudios
@@ -36,7 +36,7 @@ export interface GetAudios_audios_edition_document {
 
 export interface GetAudios_audios_edition_impression {
   __typename: 'EditionImpression';
-  paperbackSize: PrintSizeVariant;
+  paperbackSize: PrintSize;
   paperbackVolumes: number[];
 }
 
