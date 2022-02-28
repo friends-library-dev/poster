@@ -17,15 +17,14 @@
     "format": "fldev format",
     "data": "fldev tsnode ./src/prepare-data.ts",
     "prestart": "npm run data",
-    "prebuild": "npm run data",
     "start": "parcel --port 3535 index.html",
-    "build": "parcel build --dist-dir ./dist index.html",
     "postinstall": "test -f ./src/cover-props.ts || npm run data -- --empty"
   },
   "dependencies": {
-    "@friends-library/adoc-utils": "^2.0.0-beta.0",
-    "@friends-library/cover-component": "^3.1.5",
-    "@friends-library/db": "^3.0.0-beta.10",
+    "@friends-library/adoc-utils": "^2.0.1",
+    "@friends-library/cover-component": "^3.1.6",
+    "@friends-library/db": "^3.0.5",
+    "@friends-library/env": "^1.4.0",
     "@friends-library/locale": "^2.1.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
@@ -42,7 +41,7 @@
   "devDependencies": {
     "@friends-library/dev": "~4.5.1",
     "@friends-library/theme": "^1.2.0",
-    "@friends-library/types": "^7.0.0-beta.2",
+    "@friends-library/types": "^7.0.0",
     "@types/classnames": "^2.2.11"
   },
   "alias": {

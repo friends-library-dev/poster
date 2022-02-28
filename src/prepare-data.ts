@@ -61,8 +61,7 @@ async function getAudios(): Promise<GetAudios['audios']> {
   if (process.argv.includes(`--empty`)) {
     return [];
   }
-  const TOKEN = env.requireVar(`CLI_FLP_API_TOKEN`);
-  const client = getClient({ env: `dev`, fetch, token: TOKEN });
+  const client = getClient({ env: `infer_node`, process, fetch });
   const { data } = await client.query<GetAudios>({ query: QUERY });
   return data.audios.filter(({ edition }) => !edition.isDraft);
 }
